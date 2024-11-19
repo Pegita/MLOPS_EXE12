@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Input Data{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Enter Data for Prediction</h2>
+    <form method="POST" action="/predict" class="mt-4">
+        <!-- Open Price -->
+        <div class="mb-3">
+            <label for="open" class="form-label">Open Price</label>
+            <input type="number" class="form-control" id="open" name="open" placeholder="Enter open price" required>
+        </div>
+
+        <!-- High Price -->
+        <div class="mb-3">
+            <label for="high" class="form-label">High Price</label>
+            <input type="number" class="form-control" id="high" name="high" placeholder="Enter high price" required>
+        </div>
+
+        <!-- Low Price -->
+        <div class="mb-3">
+            <label for="low" class="form-label">Low Price</label>
+            <input type="number" class="form-control" id="low" name="low" placeholder="Enter low price" required>
+        </div>
+
+        <!-- Volume -->
+        <div class="mb-3">
+            <label for="volume" class="form-label">Volume</label>
+            <input type="number" class="form-control" id="volume" name="volume" placeholder="Enter volume" required>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-success w-100">Predict</button>
+    </form>
+</div>
+{% endblock %}
